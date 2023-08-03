@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.xyz</groupId>
+  <artifactId>03-Maven-Web-App</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>03-Maven-Web-App Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+         <properties>
+		<java.version>1.8</java.version>
+                <sonar.host.url>http://44.204.1.104:9000</sonar.host.url>
+                <sonar.login>admin</sonar.login>
+                <sonar.password>admin</sonar.password>
+
+	</properties>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+   <distributionManagement>
+
+<repository>
+   <id>nexus</id>
+    <name>Lucky_Releaserepo09 </name>
+     <url>http://44.203.188.252:8081/repository/Lucky_Release-repo/</url>
+      </repository>
+
+
+<snapshotRepository>
+         <id>nexus</id>
+         <name>Lucky_Snapshot01 </name>
+         <url>http://44.203.188.252:8081/repository/Lucky_Snapshot-repo/</url>
+         </snapshotRepository>
+
+</distributionManagement>
+  <build>
+    <finalName>03-Maven-Web-App</finalName>
+  </build>
+</project>
